@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100vh;
+  margin: 30px auto;
+  background: #dedede;
+  padding: 0 20px;
+  border-radius: 5px;
+  display: flex;
+  position: relative;
+}
+.Title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #040718;
+  text-align: center;
+  margin: 20px auto;
+  text-transform: capitalize;
+}
+
+.navbar {
+  background-color: #040718;
+  padding: 30px 0;
+  position: absolute;
+  border-top: 3px solid green;
+  top: 0;
+  z-index: 1;
+  margin: 150px auto;
+  width: 1240px;
+  /* height: 60px; */
+  left: 0;
+  right: 0;
+}
+
+.navbar::before,
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  border-style: solid;
+  width: 0;
+  height: 0;
+}
+
+.navbar::before {
+  left: 0;
+  border-width: 0px 20px 20px 0;
+  border-color: transparent #040718 transparent transparent;
+}
+
+.navbar::after {
+  right: 0;
+  border-width: 20px 20px 0 0;
+  border-color: #040718 transparent transparent transparent;
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-left: 20px;
+  gap: 40px;
+}
+
+.nav-menu .nav-link {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  overflow: visible;
+}
+.nav-menu .nav-link span {
+  transition: transform 0.3s;
+  display: inline-block;
+}
+.nav-menu .nav-link:hover span {
+  transform: translateY(-15px);
+}
+
+.nav-menu .nav-link:hover {
+  background-color: #2e2e3e;
+  color: limegreen;
+  border: 2px solid limegreen;
+  margin-top: -25px;
+  border-top: none;
+  border-radius: 0px 0px 5px 5px;
+  padding-top: 50px;
+  z-index: 10;
+  padding-bottom: 10px;
+  transform: translateY(-25px);
+}
+
+.nav-menu .nav-link::before {
+  content: "";
+  position: absolute;
+  top: -0.5px;
+  left: -20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 20px 20px;
+  border-color: transparent transparent #2e2e3e transparent;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 2;
+}
+.nav-menu .nav-link::after {
+  content: "";
+  position: absolute;
+  top: -0.5px;
+  right: -20px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 0 20px;
+  border-color: transparent transparent transparent #2e2e3e;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+  opacity: 1;
+}

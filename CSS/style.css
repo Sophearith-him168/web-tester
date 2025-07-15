@@ -1,0 +1,56 @@
+body {
+  font-family: "Bitcount_Grid_Double";
+}
+@font-face {
+  font-family: Bitcount_Grid_Double;
+  src: url(./fonts/Bitcount_Grid_Double/BitcountGridDouble-VariableFont_CRSV\ELSH\ELXP\slnt\wght.ttf);
+}
+.content {
+  width: 1000px;
+  height: auto;
+  margin: 100px auto;
+  background-color: #ddd;
+  border-radius: 10px;
+  padding: 30px;
+  font-size: large;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  line-height: 40px;
+  text-transform: capitalize;
+  /* word-wrap: break-word; */
+  word-break: break-all;
+  word-spacing: 2px;
+  /* letter-spacing: 5px; use it only 0.2px */
+}
+.content p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  /* text-indent: 50px; */
+}
+
+.card {
+  width: 33.33%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 50px auto;
+}
+.card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 10px 10px 0 0;
+}
+.card .card-content {
+  padding: 10px 20px;
+}
+.card .card-content p {
+  font-size: 17px;
+  font-family: "Poppins", sans-serif;
+  line-height: 28px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
